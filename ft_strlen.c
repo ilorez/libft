@@ -1,16 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 12:02:36 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:08:58 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/10/23 08:18:38 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/10/23 08:31:47 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+// #include "stdio.h"
+
+size_t	ft_strlen(const char *s)
 {
-	return (c >= 0 && c <= 127);
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
+
+/* int main(int c, char **av)
+{
+	printf("%zu", ft_strlen(av[c*0 + 1]));
+}*/
