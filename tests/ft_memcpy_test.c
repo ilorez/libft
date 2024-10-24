@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "../ft_memcpy.c"
-
+void *ft_memcpy(void *dst, const void *src, size_t n);
 void test_ft_memcpy()
 {
     char src[] = "Hello, World!";

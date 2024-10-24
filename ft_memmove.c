@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 09:21:36 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/24 15:58:49 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/10/24 14:28:45 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/10/24 15:57:22 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "stdio.h"
 //#include "stdlib.h"
+//#include "stdio.h"
 
-static void	*_ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char			*nb;
-	size_t			i;
-	unsigned int	uc;
+	size_t	i;
+	char	*udst;
+	char	*usrc;
 
-	if (!b)
+	if (!dst || !src)
 		return (NULL);
-	i = 0;
-	uc = c;
-	nb = b;
-	while (i < len)
-		nb[i++] = uc;
-	return (b);
+	udst = (char *)dst;
+	usrc = (char *)src;
+	i = -1;
+	while (++i < len)
+		*(udst + len - i - 1) = *(usrc + len - i - 1);
+	return (dst);
 }
 
-void	ft_bzero(void *s, size_t n)
+/*int main()
 {
-	_ft_memset(s, 0, n);
-}
-
-/*int	main(void)
-{
-	char(*str) = "hello world";
-	ft_bzero(str, 48, 5);
-	printf("str: %s\n", str);
+	char str[] = "abcdef";
+	char *my_dst;
+	my_dst = (str + 2);
+	printf("original: %s\nafter Edit: %s", str, (char *)memmove(my_dst ,
+			str,3 ));
 }*/
