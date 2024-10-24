@@ -22,12 +22,15 @@ int	ft_isalpha(int c)
 }
 
 /*
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int i = 0;
+	int		i;
+	char	c;
+
+	i = 0;
 	while (i < argc)
-	{		
-		char c = ft_isalpha(argv[i][0]) + 48; 
+	{
+		c = ft_isalpha(argv[i][0]) + 48;
 		write(1,&c , 1);
 		i++;
 	}
