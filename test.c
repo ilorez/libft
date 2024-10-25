@@ -6,16 +6,17 @@
 /*   By: znajdaou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:34:07 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/25 10:34:55 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/25 14:28:34 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-	int ddd = 1;
-	int* ptr;
-	(*ptr) = 77;
-	printf("1: %p,\n2: %i", ptr, *ptr);
+	int *ptr = malloc(4);
+	
+	*ptr = 44;
+	printf("a: %p\nb:%d\n", ptr, *ptr);
 }
