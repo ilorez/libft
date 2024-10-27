@@ -13,7 +13,7 @@
 //#include "stdlib.h"
 //#include "stdio.h"
 
-static void	*_ft_memset(void *b, int c, size_t len)
+/*static void	*_ft_memset(void *b, int c, size_t len)
 {
 	char			*nb;
 	size_t			i;
@@ -32,20 +32,20 @@ static void	*_ft_memset(void *b, int c, size_t len)
 static void	_ft_bzero(void *s, size_t n)
 {
 	_ft_memset(s, 0, n);
-}
+}*/
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	t;
 	void	*ptr;
 
-	if (size != 0 && (count > ((size_t) -1 / size)))
+	if (size != 0 && (count > ((size_t)-1 / size)))
 		return (NULL);
 	t = count * size;
 	ptr = malloc(t);
 	if (!ptr)
 		return (NULL);
-	_ft_bzero(ptr, t);
+	ft_bzero(ptr, t);
 	return (ptr);
 }
 

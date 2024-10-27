@@ -13,7 +13,7 @@
 //#include "stdio.h"
 //#include "stdlib.h"
 
-static void	*_ft_memset(void *b, int c, size_t len)
+/*static void	*_ft_memset(void *b, int c, size_t len)
 {
 	char			*nb;
 	size_t			i;
@@ -27,11 +27,11 @@ static void	*_ft_memset(void *b, int c, size_t len)
 	while (i < len)
 		nb[i++] = uc;
 	return (b);
-}
+}*/
 
 void	ft_bzero(void *s, size_t n)
 {
-	_ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
 
 /*int	main(void)

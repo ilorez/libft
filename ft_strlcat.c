@@ -14,16 +14,6 @@
 //#include "string.h"
 //#include "stdlib.h"
 
-static size_t	_ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 static void	_ft_strncat(char *dest, const char *src, size_t nb, size_t dl)
 {
 	size_t	j;
@@ -43,8 +33,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	src_len;
 
-	src_len = _ft_strlen(src);
-	dest_len = _ft_strlen(dst);
+	src_len = ft_strlen(src);
+	dest_len = ft_strlen(dst);
 	dest_p_src_len = dest_len + src_len;
 	if (size <= dest_len)
 		return (size + src_len);

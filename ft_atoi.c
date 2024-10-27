@@ -13,12 +13,12 @@
 //#include "stdlib.h"
 //#include "stdio.h"
 
-static int	_ft_isdigit(int c)
+/*static int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
-}
+}*/
 
 static int	_ft_isspace(int c)
 {
@@ -41,7 +41,7 @@ int	ft_atoi(const char *nptr)
 	if (nptr[i] == '-' || nptr[i] == '+')
 		if (nptr[i++] == '-')
 			signe = -1;
-	while (_ft_isdigit(nptr[i]))
+	while (ft_isdigit(nptr[i]))
 		re = re * 10 + (nptr[i++] - 48);
 	return ((int)(re * signe));
 }

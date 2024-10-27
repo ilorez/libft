@@ -27,5 +27,5 @@ size_t	ft_strlen(const char *s)
 {
 	const char *str;
 	printf("%zu, %zu", ft_strlen(av[1]), ft_strlen(av[1]));
-	return c;
+	return (c);
 }*/
