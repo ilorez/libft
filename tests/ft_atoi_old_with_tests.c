@@ -6,12 +6,12 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:27:57 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/27 09:22:14 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/27 09:12:54 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "stdlib.h"
-//#include "stdio.h"
+#include "stdlib.h"
+#include "stdio.h"
 
 static int	_ft_isdigit(int c)
 {
@@ -32,7 +32,9 @@ int	ft_atoi(const char *nptr)
 	size_t				i;
 	int					signe;
 	unsigned long long	re;
+	unsigned long long max;
 
+	max = 9223372036854775807;
 	i = 0;
 	signe = 1;
 	re = 0;
@@ -42,11 +44,20 @@ int	ft_atoi(const char *nptr)
 		if (nptr[i++] == '-')
 			signe = -1;
 	while (_ft_isdigit(nptr[i]))
+	{
+		if (re > max)
+		{
+			if (signe == 1)
+				return ((int)(-1));
+			else
+				return ((int)(0));
+		}
 		re = re * 10 + (nptr[i++] - 48);
+	}
 	return ((int)(re * signe));
 }
 
-/*int main(int ac, char   **av)
+int main(int ac, char   **av)
 {
 	if (ac == 2)
 	{
@@ -56,4 +67,4 @@ int	ft_atoi(const char *nptr)
 		printf("ft_atoi: %d\n", res1);
 	}
 	return (0);
-}*/
+}
