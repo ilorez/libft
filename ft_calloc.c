@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 09:51:08 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/27 09:51:10 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:12:32 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	t;
 	void	*ptr;
 
+	if (size != 0 && (count > ((size_t) -1 / size)))
+		return (NULL);
 	t = count * size;
 	ptr = malloc(t);
 	if (!ptr)
