@@ -1,0 +1,1 @@
+[ ] test ft_memchr

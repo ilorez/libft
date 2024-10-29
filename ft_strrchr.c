@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	printf("str:%s\nhere is it:%p\n", av[1], ft_strrchr(av[1], '\0'));
 	printf("str:%s\nhere is it:%p\n", av[1], strrchr(av[1], '\0'));
 	//char *res = ft_strchr(av[1], (int)av[2][0]);
-	//*res = 'W';
+	// *res = 'W';
 	//printf("new str:%s\n", av[1]);
 	return (ac);
 }*/
