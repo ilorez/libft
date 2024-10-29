@@ -1,37 +1,15 @@
 #include "stdio.h"
-#include "stdlib.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int main()
 {
-	unsigned int	len;
+	int d = 10;
+	int *ptr1 = &d;
+	int **ptr2 = &ptr1;
+	int *ptr3;
 
-	len = 0;
-	if (size > 0)
-	{
-		while (src[len] && --size)
-		{
-			dest[len] = src[len];
-			len++;
-		}
-		dest[len] = '\0';
-	}
-	while (src[len])
-	{
-		len++;
-	}
-	return (len);
-}
-
-
-int main (int ac, char **av)
-{
-	// test the function if it's really cpy the src to dst with a size of dstsize
-	if (ac == 4)
-	{
-		char *dst = (char *)malloc(atoi(av[3]));
-		printf("%d\n", ft_strlcpy(dst, av[1], atoi(av[2])));
-		printf("%s\n", dst);
-	}
-	return (0);
-
+	ptr3 = &d;
+	ptr2 = &ptr3;
+	printf("ptr1:%p\nptr2:%p\nd:%d\n", ptr1, ptr2, d);
+	printf("&ptr1:%p\n&ptr2:%p\n&d:%p\n", &ptr1, &ptr2, &d);
+	printf("output:%p", *&*ptr2);
 }

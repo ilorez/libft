@@ -15,6 +15,7 @@
 
 	// includes
 	#include "stdlib.h"
+	#include "stdio.h"
 	
 	// memory functions
 	void	*ft_memset(void *b, int c, size_t len);

@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "stdio.h"
-//#include "string.h"
-//#include "stdlib.h"
+#include "libft.h"
+
 
 static void	_ft_strncat(char *dest, const char *src, size_t nb, size_t dl)
 {

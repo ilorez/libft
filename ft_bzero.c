@@ -10,24 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "stdio.h"
-//#include "stdlib.h"
+#include "libft.h"
 
-/*static void	*_ft_memset(void *b, int c, size_t len)
-{
-	char			*nb;
-	size_t			i;
-	unsigned int	uc;
-
-	if (!b)
-		return (NULL);
-	i = 0;
-	uc = c;
-	nb = b;
-	while (i < len)
-		nb[i++] = uc;
-	return (b);
-}*/
 
 void	ft_bzero(void *s, size_t n)
 {

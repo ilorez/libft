@@ -9,16 +9,7 @@
 /*   Updated: 2024/10/27 09:22:14 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include "stdlib.h"
-//#include "stdio.h"
-
-/*static int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}*/
+#include "libft.h"
 
 static int	_ft_isspace(int c)
 {

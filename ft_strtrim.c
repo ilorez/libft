@@ -10,64 +10,42 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
-{
-	size_t	i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	if (s[i] != c)
-		return (NULL);
-	return ((char *)(&(s[i])));
-}
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t	len;
-
-	len = 0;
-	if (dstsize)
-	{
-		while (src[len] && --dstsize)
-		{
-			dst[len] = src[len];
-			len++;
-		}
-		dst[len] = '\0';
-	}
-	while (src[len])
-	{
-		len++;
-	}
-	return (len);
-}
-
-// funciton for test if current caracter in set or not
 char *ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	char *start;
-	char *dst;
+	size_t pre;
+	size_t	suf;
+  size_t len;
 
-	
-	start = NULL;
-	while (s1[i])
-	{
-		j=0;
-		while (s1[i+j] && ft_strchr(set,(int) s1[i + j]) )
-			j++;
-		if(s[i])
-			i += j + 1;
-		if (!start)
-			start = s1[i - 1];
-	}
-	// print size will be alocated
-	printf("size(i):%d\n", i);
-	dst = malloc(+1);
-	if (!dst)
-		return (NULL);
-	strlcpy(dst, start	
-	
-	
-		
+  pre = 0;
+  suf = 0;
+  len = ft_strlen(s1);
+	while (s1[pre])
+  {
+    if (ft_strchr(set, s1[pre]))
+      pre++;
+    else
+      break;
+  }
+  while (suf < len)
+  {
+    if (ft_strchr(set, s1[len - suf - 1]))
+      suf++;
+    else 
+      break;
+  }
+  if ((pre + suf) > len)
+    return ft_substr(s1, pre-1, 0);
+  len = len - pre - suf;
+  return ft_substr(s1, pre, len);
 }
+
+/*int main(int argc, char *argv[])
+{
+  if (argc == 3)
+  {
+    printf("ft_strtrim:%s\n", ft_strtrim(argv[1], argv[2]));
+  }
+  return EXIT_SUCCESS;
+}*/
