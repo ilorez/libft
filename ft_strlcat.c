@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 static void	_ft_strncat(char *dest, const char *src, size_t nb, size_t dl)
 {
 	size_t	j;

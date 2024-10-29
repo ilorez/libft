@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
@@ -27,9 +26,11 @@ char	*ft_strchr(const char *s, int c)
 
 /*int main(int ac, char **av)
 {
+	char	*res;
+
 	printf("str:%s\nhere is it:%s\n", av[1], ft_strchr(av[1], (int)av[2][0]));
 	printf("str:%s\nhere is it:%s\n", av[1], strchr(av[1], (int)av[2][0]));
-	char *res = ft_strchr(av[1], (int)av[2][0]);
+	res = ft_strchr(av[1], (int)av[2][0]);
 	*res = 'W';
 	printf("new str:%s\n", av[1]);
 	return (ac);
