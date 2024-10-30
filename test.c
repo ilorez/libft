@@ -3,23 +3,42 @@
 #include "stdlib.h"
 
 
-static void *_ft_free_words(char **strs)
+static void *_ft_free_words(char **str)
 {
 	size_t i;
 
 	i = 0;
 	while (str[i])
+	{
+		printf("freed the string (i = %zu): %s\n", i, str[i]);
 		free(str[i++]);
+		printf("done\n");
+	}
+
+	printf("freed the array\n");
 	free(str);
 	return NULL;
 }
 
 int main()
 {
+	// array of nullsd
+	char *str;
+	str = malloc(6);
+
+	str[0] = 'h';
+	str[1] = 'e';
+	str[2] = 'l';
+	str[3] = 'l';
+	str[4] = 'o';
+	str[5] = '\0';
 	
+	char **strs = malloc(2 * sizeof(char *) + 1);
+	strs[0] = str;
+	strs[1] = NULL;
+	strs[2] = 0;
+	_ft_free_words(strs);
 }
-
-
 
 
 /*int main()
