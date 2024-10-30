@@ -1,5 +1,6 @@
 #include "unistd.h"
 #include "stdio.h"
+#include "stdlib.h"
 /*int main()
 {
 	int d = 10;
@@ -13,19 +14,11 @@
 	printf("&ptr1:%p\n&ptr2:%p\n&d:%p\n", &ptr1, &ptr2, &d);
 	printf("output:%p", *&*ptr2);
 }*/
+
 int main()
 {
-  //char c = 'a';
-  char str[] = "hllo";
-  *(str + 1) = 'a';
-  printf("%s\n", str);
-  // change c to string so have terminating null
-  //
-  
-  //char str[] = {c, '\0'};
- /* while (*str != '\0') {
-    *str = 'a';
-    write(1, str, 1);
-    str++;
-}*/
+  char str[] = "hallo";
+  char *str1 = str;
+  printf("ptr1:%p\n", str );
+  printf("ptr2:%p",++str1);
 }
