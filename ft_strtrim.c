@@ -6,15 +6,15 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:21:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/30 10:22:04 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:57:06 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t _ft_found_pre(char const *s1, char const *set)
+static size_t	_ft_found_pre(char const *s1, char const *set)
 {
-	size_t pre;
+	size_t	pre;
 
 	pre = 0;
 	while (s1[pre])
@@ -24,7 +24,7 @@ static size_t _ft_found_pre(char const *s1, char const *set)
 		else
 			break ;
 	}
-	return pre;
+	return (pre);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -36,10 +36,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (NULL);
 	if (!set && s1)
-		return ft_strdup(s1);
+		return (ft_strdup(s1));
 	suf = 0;
 	len = ft_strlen(s1);
-	pre = _ft_found_pre(s1, set);;
+	pre = _ft_found_pre(s1, set);
 	while (suf < len)
 	{
 		if (ft_strchr(set, s1[len - suf - 1]))
