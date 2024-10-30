@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:21:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/28 10:43:24 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:22:04 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, pre, len));
 }
 
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
   if (argc == 3)
   {
@@ -62,4 +62,4 @@ int main(int argc, char *argv[])
 	printf("str is NULL:%s\n", ft_strtrim(NULL, argv[2]));
   }
   return (EXIT_SUCCESS);
-}
+}*/

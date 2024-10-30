@@ -1,6 +1,27 @@
 #include "unistd.h"
 #include "stdio.h"
 #include "stdlib.h"
+
+
+static void *_ft_free_words(char **strs)
+{
+	size_t i;
+
+	i = 0;
+	while (str[i])
+		free(str[i++]);
+	free(str);
+	return NULL;
+}
+
+int main()
+{
+	
+}
+
+
+
+
 /*int main()
 {
 	int d = 10;
@@ -15,10 +36,10 @@
 	printf("output:%p", *&*ptr2);
 }*/
 
-int main()
+/*int main()
 {
   char str[] = "hallo";
   char *str1 = str;
   printf("ptr1:%p\n", str );
   printf("ptr2:%p",++str1);
-}
+}*/
