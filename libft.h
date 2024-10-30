@@ -14,8 +14,8 @@
 #define LIBFT_H
 
 	// includes
-	#include "stdlib.h"
-	#include "stdio.h"
+	#include <stdlib.h>
+	#include <stdio.h>
 	
 	// memory functions
 	void	*ft_memset(void *b, int c, size_t len); // this function is for setting a memory block to a specific value

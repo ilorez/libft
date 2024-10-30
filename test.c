@@ -1,6 +1,6 @@
-#include "unistd.h"
-#include "stdio.h"
-#include "stdlib.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 static void *_ft_free_words(char **str)
