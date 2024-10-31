@@ -37,6 +37,9 @@
 	size_t	ft_strlcat(char *dst, const char *src, size_t size); // the difference between strlcat and strlcpy is that strlcat append the src to dst and strlcpy copy the src to dst
 	char	*ft_strdup(const char *s1); // this function is for duplicating a string
 	char	*ft_substr(char const *s, unsigned int start, size_t len); // this function is for extracting a substring from a string
+	char	*ft_strtrim(char const *s1, char const *set);
+	void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+	char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 	// is functions
 	int	ft_isalpha(int c); 
@@ -49,8 +52,19 @@
 	char	ft_toupper(int c);
 	char	ft_tolower(int c);
 
-	// atoi functions
+	// atoi & itoa functions
 	int	ft_atoi(const char *nptr);
+	char	*ft_itoa(int n);
+
+	// put functions
+	void	ft_putchar_fd(char c, int fd);
+	void	ft_putstr_fd(char *s, int fd);
+	void ft_putendl_fd(char *s, int fd);
+
+	// arrays functions
+	char	*ft_strjoin(char const *s1, char const *s2);
+	char	**ft_split(char const *s, char c);
+
 
 
 #endif
