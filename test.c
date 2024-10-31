@@ -20,7 +20,8 @@ int	main(void)
 //	Write into the file descriptor
 	write(fd, "Hello World!\n", 13);
 //	Close the file
-close(fd);
+	close(fd);
+	unlink("test.txt");
 	return (0);
 }
 
