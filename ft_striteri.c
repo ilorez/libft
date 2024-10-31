@@ -6,13 +6,13 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:32:04 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/30 15:46:30 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:53:19 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
@@ -21,23 +21,22 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = -1;
 	while (s[++i])
 		f(i, &s[i]);
-
 }
 
-void _ft_toupper(unsigned int i, char *c)
+/*void _ft_toupper(unsigned int i, char *c)
 {
   if (i % 2)
-	   *c -= 32;
+		*c -= 32;
 }
 int	main(int ac, char **av)
 {
   if (ac == 3){
-    ft_striteri(av[1], _ft_toupper);
+	ft_striteri(av[1], _ft_toupper);
 		printf("%s\n", av[1]);
 
-    ft_striteri(av[2], NULL);
-    ft_striteri(NULL, _ft_toupper);
+	ft_striteri(av[2], NULL);
+	ft_striteri(NULL, _ft_toupper);
 		printf("when str null or funtion pointer null: %s\n", av[2]);
   }
   return (0);
-}
+}*/

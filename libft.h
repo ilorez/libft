@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:06:37 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/27 14:54:35 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:58:58 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 	// includes
 	#include <stdlib.h>
 	#include <stdio.h>
+  #include <unistd.h>
 	
 	// memory functions
 	void	*ft_memset(void *b, int c, size_t len); // this function is for setting a memory block to a specific value
