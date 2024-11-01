@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 09:15:17 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/01 10:05:39 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/01 11:04:32 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-		printf("2");
 		cur = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		*lst = cur;
 	}
-	printf("3");
 	*lst = (NULL);
 }
 
