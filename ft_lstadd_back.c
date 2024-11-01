@@ -6,23 +6,24 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:24:41 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/31 12:29:51 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:03:41 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last = ft_lstlast(*lst);
+	t_list	*last;
+
+	last = ft_lstlast(*lst);
 	if (!last)
 		*lst = new;
 	else
 		last->next = new;
-	
 }
 
-int main()
+/*int main()
 {
 	t_list *lst = ft_lstnew("1");
 	t_list *lst2 = ft_lstnew("2");
@@ -43,7 +44,7 @@ int main()
 	ft_lstadd_back(&lst, new);
 	while (lst)
 	{
-		printf("%s\n", lst->content);
+		printf("%s\n", (char *)lst->content);
 		lst = lst->next;
 	}
-}
+}*/
