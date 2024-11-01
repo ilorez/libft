@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:28:45 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/01 18:44:38 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:13:33 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*udst;
 	char	*usrc;
 
+	if (!dst && !src)
+		return (NULL);
 	udst = (char *)dst;
 	usrc = (char *)src;
 	i = -1;
@@ -33,16 +35,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 /*int main()
 {
 	char str[] = "00123456";
-  //char *str1 = NULL;
+  void *str1 = (void *)0;
+  void *str2 = (void *)0;
   //char *str1 = ft_strdup("hello");
-  //char *str2 = NULL;
   //char *str2 = ft_strdup("hello");
-	char *my_dst;
-	char *my_str;
+	//char *my_dst;
+	//char *my_str;
 
-	my_dst = (str );
-  my_str = str + 2;
+	//my_dst = (str );
+  //my_str = str + 2;
   //ft_memmove(str1 ,str2,3 );
-	printf("original: %s\nafter Edit: %s", str, (char *)memmove(my_dst ,
-			my_str,4 ));
+	printf("original: %s\nafter Edit: %s", str, (char *)memmove(str1 ,str2, 5));
 }*/
