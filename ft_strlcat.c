@@ -6,11 +6,12 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:13 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/25 14:14:05 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:07:46 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 static void	_ft_strncat(char *dest, const char *src, size_t nb, size_t dl)
 {
@@ -31,14 +32,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	src_len;
 
-	if (dst && !src && !size)
-		return (ft_strlen(dst));
-	if (!dst && src && size)
-		return (ft_strlen(src));
-	if (!dst && !src && !size)
-		return (0);
-	
 	src_len = ft_strlen(src);
+	if (!dst && src && !size)
+		return (src_len);
 	dest_len = ft_strlen(dst);
 	dest_p_src_len = dest_len + src_len;
 	if (size <= dest_len)
@@ -88,4 +84,18 @@ int	main(int ac, char **av)
 	printf("========= original function =========\nmy_string: %s\nmy_dst: %s\n",
 		src, dst2);
 	return (ac);
+}*/
+
+/*int main()
+{
+  char *src = " world";
+  char *dst = NULL;
+
+  //size_t res = strlen(dst) + strlen(src);
+  size_t result = ft_strlcat(dst, src, 0);
+
+ // printf("dst: %s\n", dst);
+  //printf("res value: %zu\n", res);
+  printf("result value: %zu\n", result);
+
 }*/
