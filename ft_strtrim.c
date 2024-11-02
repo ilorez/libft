@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:21:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/02 14:45:07 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:59:03 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	pre = _ft_found_pre(s1, set);
 	if (pre == len)
-		return (ft_substr(s1, pre - 1, 0));
+		return (ft_strdup(""));
 	while (suf < len)
 	{
 		if (ft_strchr(set, s1[len - suf - 1]))
