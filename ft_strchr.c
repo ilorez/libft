@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:42:48 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/03 14:34:32 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:04:15 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
-	while (s[i] != c && s[i])
+	while (s[i] != (char)c && s[i])
 		i++;
-	if (s[i] != c)
+	if (s[i] != (char)c)
 		return (NULL);
 	return ((char *)(&(s[i])));
 }

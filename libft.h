@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:06:37 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/01 17:58:42 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:39:54 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,8 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 
 // to functions
-char				ft_toupper(int c);
-char				ft_tolower(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
 
 // atoi & itoa functions
 int					ft_atoi(const char *nptr);
