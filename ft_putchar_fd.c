@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 15:54:16 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/31 09:27:49 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:47:46 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd != -1)
+		write(fd, &c, 1);
 }
 
 /*int main (void)
