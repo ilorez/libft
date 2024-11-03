@@ -36,6 +36,6 @@ void	ft_putnbr_fd(int n, int fd)
 /*int main(int ac, char **av)
 {
   if (ac == 3)
-    ft_putnbr_fd(ft_atoi(av[1]), ft_atoi(av[2]));
+	ft_putnbr_fd(ft_atoi(av[1]), ft_atoi(av[2]));
   return (0);
 }*/

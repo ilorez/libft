@@ -43,7 +43,7 @@ static void	*_ft_free_words(char **strs)
 
 static void	_ft_skip(int not, char const *s, size_t *i, char c)
 {
-	if (not)
+	if (not )
 		while (*(s + *i) && *(s + *i) != c)
 			(*i)++;
 	else

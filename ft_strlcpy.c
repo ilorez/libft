@@ -47,4 +47,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	printf ("original ------\nstr: %s,\nstrlcpy:%s", av[1], str3 );
 	return (ac);
 }*/
-

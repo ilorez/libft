@@ -20,9 +20,9 @@ static int	_ft_isspace(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	size_t				i;
-	int					signe;
-	int	re;
+	size_t	i;
+	int		signe;
+	int		re;
 
 	i = 0;
 	signe = 1;

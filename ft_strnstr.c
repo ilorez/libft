@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (needle[0] == '\0') 
+	if (needle[0] == '\0')
 		return ((char *)haystack);
 	while (i < len && haystack[i])
 	{
@@ -37,9 +37,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // original main
 /*char *strnstr(const char *s, const char *find, size_t slen)
 {
-	char c, sc;
-	size_t len;
+	size_t	len;
 
+	char c, sc;
 	if ((c = *find++) != '\0') {
 		len = strlen(find);
 		do {
@@ -57,18 +57,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 
 
-int main()
+int	main(void)
 {
-  // test 1 - testing 
+  // test 1 - testing
 
-  
+
   //char *str1 = ft_strdup("hello");
   //char *str2 = NULL;
   //char *f_at = ft_strnstr((const char *)str1, (const char *)str2, 0 );
   //char *o_f_at = strnstr((const char *)str1, (const char *)str2, 0);
   //ft_strnstr((const char *)str1, (const char *)str2, 0 );
   //strnstr((const char *)str1, (const char *)str2, 0);
-	//printf("str1: %s\nstr2: %s\nfounded at:%s\noriginal founded at:%s\n", str1, str2, f_at, o_f_at);
+	//printf("str1: %s\nstr2: %s\nfounded at:%s\noriginal founded at:%s\n",
+		str1, str2, f_at, o_f_at);
 
 	return (0);
 }*/
