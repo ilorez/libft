@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:21:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/30 11:57:06 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:59:03 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1)
 		return (NULL);
-	if (!set && s1)
+	if (!set)
 		return (ft_strdup(s1));
 	suf = 0;
 	len = ft_strlen(s1);
 	pre = _ft_found_pre(s1, set);
+	if (pre == len)
+		return (ft_strdup(""));
 	while (suf < len)
 	{
 		if (ft_strchr(set, s1[len - suf - 1]))
@@ -47,8 +49,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
-	if ((pre + suf) > len)
-		return (ft_substr(s1, pre - 1, 0));
 	len = len - pre - suf;
 	return (ft_substr(s1, pre, len));
 }
@@ -57,9 +57,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
   if (argc == 3)
   {
-	printf("ft_strtrim:%s\n", ft_strtrim(argv[1], argv[2]));
-	printf("set is NULL:%s\n", ft_strtrim(argv[1], NULL));
-	printf("str is NULL:%s\n", ft_strtrim(NULL, argv[2]));
+	printf("ft_strtrim:%s\nlen: %ld\n", ft_strtrim(argv[1], argv[2]),
+		ft_strlen(ft_strtrim(argv[1], argv[2])));
+	//printf("set is NULL:%s\n", ft_strtrim(argv[1], NULL));
+	//printf("str is NULL:%s\n", ft_strtrim(NULL, argv[2]));
   }
   return (EXIT_SUCCESS);
 }*/
