@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:51:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/03 16:12:43 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 17:24:07 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,14 +30,11 @@ static size_t	_ft_c_ws(char const *str, char c)
 	return (w);
 }
 
-static void	*_ft_free_words(char **strs)
+static void	*_ft_free_words(char **strs, size_t i)
 {
-	size_t	i;
-
-	i = 0;
-	while (strs[i])
-		free(strs[i++]);
-	free(strs);
+  while (i--)
+    free(strs[i]);
+  free(strs);
 	return (NULL);
 }
 
@@ -70,7 +67,7 @@ static char	**_get_splited(char const *s, char c, char **strings)
 			_ft_skip(1, s, &i, c);
 			word = ft_substr(s, start - s, (s + i) - start);
 			if (!word)
-				return (_ft_free_words(strings));
+				return (_ft_free_words(strings, w_i));
 			strings[w_i++] = word;
 		}
 	}
