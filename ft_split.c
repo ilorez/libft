@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:51:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/30 11:56:17 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:34:21 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -41,13 +41,6 @@ static void	*_ft_free_words(char **strs)
 	return (NULL);
 }
 
-static void	_ft_init_vars_to_zero(size_t *i, size_t *w_i)
-{
-	*i = 0;
-	*w_i = 0;
-	return ;
-}
-
 static void	_ft_skip(int not, char const *s, size_t *i, char c)
 {
 	if (not)
@@ -59,18 +52,15 @@ static void	_ft_skip(int not, char const *s, size_t *i, char c)
 	return ;
 }
 
-char	**ft_split(char const *s, char c)
+static char	**_get_splited(char const *s, char c, char **strings)
 {
-	char	**strings;
 	char	*word;
 	char	*start;
 	size_t	i;
 	size_t	w_i;
 
-	_ft_init_vars_to_zero(&i, &w_i);
-	strings = (char **)malloc(sizeof(char *) * (_ft_c_ws(s, c) + 1));
-	if (!strings)
-		return (NULL);
+	i = 0;
+	w_i = 0;
 	while (*(s + i))
 	{
 		_ft_skip(0, s, &i, c);
@@ -86,6 +76,18 @@ char	**ft_split(char const *s, char c)
 	}
 	strings[w_i] = 0;
 	return (strings);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**strings;
+
+	if (!s)
+		return (NULL);
+	strings = (char **)malloc(sizeof(char *) * (_ft_c_ws(s, c) + 1));
+	if (!strings)
+		return (NULL);
+	return (_get_splited(s, c, strings));
 }
 
 /*int	main(int argc, char **argv)
