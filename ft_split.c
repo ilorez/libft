@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:51:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/03 12:34:21 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:12:43 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -43,7 +43,7 @@ static void	*_ft_free_words(char **strs)
 
 static void	_ft_skip(int not, char const *s, size_t *i, char c)
 {
-	if (not )
+	if (not)
 		while (*(s + *i) && *(s + *i) != c)
 			(*i)++;
 	else

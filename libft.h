@@ -84,8 +84,8 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 
 // to functions
-int				ft_toupper(int c);
-int				ft_tolower(int c);
+int					ft_toupper(int c);
+int					ft_tolower(int c);
 
 // atoi & itoa functions
 int					ft_atoi(const char *nptr);
