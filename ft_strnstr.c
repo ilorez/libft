@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:39:18 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/02 15:32:04 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 09:55:55 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 }
 
 // original main
-char *strnstr(const char *s, const char *find, size_t slen)
+/*char *strnstr(const char *s, const char *find, size_t slen)
 {
 	char c, sc;
 	size_t len;
@@ -71,4 +71,4 @@ int main()
 	//printf("str1: %s\nstr2: %s\nfounded at:%s\noriginal founded at:%s\n", str1, str2, f_at, o_f_at);
 
 	return (0);
-}
+}*/

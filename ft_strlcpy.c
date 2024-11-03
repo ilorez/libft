@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:18:51 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/25 10:12:19 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 10:02:19 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -35,16 +35,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 /*int main(int ac, char **av)
 {
 	size_t	dstlen;
+	dstlen = atoi(av[2]);
 	char	str2[dstlen];
 	char	str3[dstlen];
 	size_t	len;
 	size_t	len_original;
 
-	dstlen = atoi(av[2]);
-	len = ft_strlcpy(str2, av[1], dstlen);
-	len_original = strlcpy(str3, av[1], dstlen);
-	printf ("str: %s,\nstrlcpy:%s", av[1], str2);
+	len = ft_strlcpy(NULL, av[1], 0);
+	len_original = strlcpy(NULL, av[1], 0);
+	printf ("str: %s,\nstrlcpy:%s\n", av[1], str2);
 	printf ("original ------\nstr: %s,\nstrlcpy:%s", av[1], str3 );
 	return (ac);
-}
-*/
+}*/
+
