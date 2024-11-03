@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:23:41 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/27 17:33:17 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:37:52 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if (s_len < start)
+	if (s_len <= start)
 		len = 0;
 	size = 0;
-	while (size < (len) && s[size + start])
-		size++;
+  size = ft_strlen((char *)(s + start));
+  if (size > len)
+    size = len;
 	ss = (char *)malloc(size * sizeof(char) + 1);
 	if (!ss)
 		return (NULL);
-	ft_strlcpy(ss, (s + start), size + 1);
+	ft_strlcpy(ss, (char *)(s + start), size + 1);
 	return (ss);
 }
 
