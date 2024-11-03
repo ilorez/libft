@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:58:19 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/30 15:30:12 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 12:40:18 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	char	*str;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	if (!f)
-		return (ft_strdup(s));
 	len = ft_strlen(s);
 	i = -1;
 	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
 	while (++i < len)
-		str[i] = f(i, s[i]);
+		str[i] = (*f)(i, s[i]);
+	str[i] = '\0';
 	return (str);
 }
 
