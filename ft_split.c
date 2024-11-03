@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:51:59 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/03 17:24:07 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/03 17:26:13 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -32,9 +32,9 @@ static size_t	_ft_c_ws(char const *str, char c)
 
 static void	*_ft_free_words(char **strs, size_t i)
 {
-  while (i--)
-    free(strs[i]);
-  free(strs);
+	while (i--)
+		free(strs[i]);
+	free(strs);
 	return (NULL);
 }
 
