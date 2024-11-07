@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:27:57 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 09:38:38 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:50:07 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -50,7 +50,8 @@ int	ft_atoi(const char *nptr)
 	return ((int)(re * signe));
 }
 
-/*int main(int ac, char   **av)
+/*
+  int main(int ac, char   **av)
 {
 	if (ac == 2)
 	{
