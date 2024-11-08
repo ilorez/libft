@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:52:48 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 15:35:17 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:51:18 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	main(void)
 
 	content1[0] = 42;
 	content1[1] = 442;
-	// Example 1: Node with an integer
 	node1 = ft_lstnew(content1);
 	printf("Node 1 content (int): %d\n", ((int *)(node1->content))[0]);
 	printf("Node 1 next: %p\n\n", (void *)node1->next);

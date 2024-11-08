@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:58:19 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 14:50:20 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:52:32 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-/*char _ft_toupper(unsigned int i, char c)
-{
-  if (i % 2)
-	return (c - 32);
-  return (c);
-}
-int	main(int ac, char **av)
-{
-  char *(*ft_strmapi_ptr)(char const *, char (*)(unsigned int, char)) = ft_strmapi;
-  if (ac == 2)
-	printf("%s\n", ft_strmapi(av[1], &_ft_toupper));
-	printf("null function: %s\n", ft_strmapi(av[1], NULL));
-	printf("null string: %s\n", ft_strmapi(NULL, &_ft_toupper));
-  return (0);
-}*/
