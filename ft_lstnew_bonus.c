@@ -27,20 +27,19 @@ t_list	*ft_lstnew(void *content)
 
 /*int main()
 {
-  t_list *node = ft_lstnew(NULL);
+	t_list	*node;
+	t_list	*node1;
+	int		content1[2];
+
+  node = ft_lstnew(NULL);
   //ft_lstnew(NULL);
   printf("%p\n",(void *)node->content);
   return (0);
 }*/
-
 /*
 #include <stdio.h>
-
 int	main(void)
 {
-	t_list	*node1;
-	int		content1[2];
-
 	content1[0] = 42;
 	content1[1] = 442;
 	node1 = ft_lstnew(content1);

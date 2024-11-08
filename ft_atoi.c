@@ -27,9 +27,9 @@ static int	_ft_isspace(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	int		signe;
-	unsigned long long		re;
+	size_t				i;
+	int					signe;
+	unsigned long long	re;
 	unsigned long long	max;
 
 	max = 9223372036854775807;
@@ -43,7 +43,7 @@ int	ft_atoi(const char *nptr)
 			signe = -1;
 	while (ft_isdigit(nptr[i]))
 	{
-		if (re > (max-(nptr[i] - 48))/10)
+		if (re > (max - (nptr[i] - 48)) / 10)
 			return (_d_signe(signe));
 		re = re * 10 + (nptr[i++] - 48);
 	}
