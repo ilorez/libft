@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:28:45 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/08 15:50:46 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/09 16:23:36 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*udst;
 	const unsigned char	*usrc;
 
+ 
   if (dst == src)
     return (dst);
-	if (!dst && !src)
-		return (NULL);
 	udst = (unsigned char *)dst;
 	usrc = (const unsigned char *)src;
 	i = -1;
@@ -34,10 +33,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-/*int main()
+/*#include <string.h>
+int main()
 {
   //char str1[] = "hi";
-  char *str1 = "hi";
-	printf("edit: %s\n", (char *)memmove(str1+1 ,str1, 2));
+  char *str1 = NULL;
+  char *str2 = "hi";
+	printf("edit: %s\n", (char *)ft_memmove(str2 ,str1, 2));
 	//printf("original: %s\nafter Edit: %s", str, (char *)memmove(str1 ,str2, 5));
 }*/
