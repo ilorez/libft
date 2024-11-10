@@ -27,7 +27,6 @@ int	ft_lstsize(t_list *lst)
 	return (count);
 }
 
-
 /*int	main(int ac, char **av)
 {
 	t_list	*first;

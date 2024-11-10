@@ -21,7 +21,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	}
 }
 
-
 /*void example_del(void *content)
 {
   free(content);

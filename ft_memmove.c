@@ -18,9 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*udst;
 	const unsigned char	*usrc;
 
- 
-  if (dst == src)
-    return (dst);
+	if (dst == src)
+		return (dst);
 	udst = (unsigned char *)dst;
 	usrc = (const unsigned char *)src;
 	i = -1;
@@ -34,11 +33,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 }
 
 /*#include <string.h>
-int main()
+int	main(void)
 {
   //char str1[] = "hi";
   char *str1 = NULL;
   char *str2 = "hi";
 	printf("edit: %s\n", (char *)ft_memmove(str2 ,str1, 2));
-	//printf("original: %s\nafter Edit: %s", str, (char *)memmove(str1 ,str2, 5));
+	//printf("original: %s\nafter Edit: %s", str, (char *)memmove(str1 ,str2,
+			5));
 }*/

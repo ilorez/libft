@@ -21,7 +21,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	}
 }
 
-
 /*int main(int ac, char **av)
 {
 	t_list *first;

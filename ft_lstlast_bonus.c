@@ -21,7 +21,6 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-
 /*int main()
 {
 	t_list *lst = ft_lstnew("1");
