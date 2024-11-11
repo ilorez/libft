@@ -6,12 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:11:13 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/01 18:07:46 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:59:15 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static void	_ft_strncat(char *dest, const char *src, size_t nb, size_t dl)
 {

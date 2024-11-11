@@ -6,12 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:52:48 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 15:51:18 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:57:34 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 t_list	*ft_lstnew(void *content)
 {
