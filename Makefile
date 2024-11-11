@@ -27,23 +27,27 @@ CC = cc
 
 LIBC = ar rcs
 
+RM = rm -f
 
 all: ${NAME} 
 	
 $(NAME):${MOBJS}
 	${LIBC} ${NAME} ${MOBJS}
 
-%.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@
+${MOBJS}: ${SMANDATORY}
+	${CC} ${CFLAGS} -c ${SMANDATORY}
 
-bonus: ${NAME} ${BOBJS}
+bonus: ${BOBJS}
+
+${BOBJS}: ${SBONUS}
+	${CC} ${CFLAGS} -c ${SBONUS}
 	${LIBC} ${NAME} ${BOBJS}
 
 clean:
-	rm -f ${MOBJS} ${BOBJS}
+	${RM} ${MOBJS} ${BOBJS}
 
 fclean: clean
-	rm -f ${NAME}
+	${RM} ${NAME}
 
 re: fclean all
 
