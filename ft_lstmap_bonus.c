@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:35:16 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/03 16:21:14 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:09:49 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		node = ft_lstnew(content);
 		if (!node)
 		{
-			free(content);
+			del(content);
 			ft_lstclear(&r_lst, del);
 			return (NULL);
 		}
