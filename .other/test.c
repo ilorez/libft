@@ -13,6 +13,7 @@ int	main(void)
 //	permissions for the group.
 	fd = open("test.txt", O_WRONLY | O_TRUNC | O_CREAT, 0640);
 //	Stop everything if the file could not be opened
+//	on error function work with files like open return -1
 	if (fd == -1)
 		return (1);
 //	Print the fd of the new file
