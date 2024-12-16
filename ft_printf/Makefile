@@ -6,7 +6,7 @@
 #    By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/02 16:06:17 by znajdaou          #+#    #+#              #
-#    Updated: 2024/12/02 16:47:00 by znajdaou         ###   ########.fr        #
+#    Updated: 2024/12/16 15:30:33 by znajdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,8 @@ all: $(NAME)
 $(NAME): $(MAN_OBJS)
 	$(AR) $(NAME) $(MAN_OBJS)
 
+objs: ${MAN_OBJS} 
+
 %.o: %.c ft_printf.h
 	$(CC) $(FLAGS) -I. -c $< -o $@
 
@@ -40,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re objs

@@ -1,4 +1,16 @@
 
+FT_PRINTF = ./ft_printf
+NAME_FT_PRINTF = libftprintf.a
+OBJS_FT_PRINTF= ${FT_PRINTF}/ft_printf.o \
+						${FT_PRINTF}/ft_print_char.o \
+						${FT_PRINTF}/ft_print_str.o \
+						${FT_PRINTF}/ft_print_ptr.o \
+						${FT_PRINTF}/ft_print_nbr.o \
+						${FT_PRINTF}/ft_print_unsigned_nbr.o \
+						${FT_PRINTF}/ft_print_hexa.o
+
+
+
 SMANDATORY = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
        ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
@@ -29,8 +41,10 @@ LIBC = ar rcs
 
 RM = rm -f
 
-all: ${NAME} 
-	
+all: mandaory bonus printf
+
+mandaory: ${NAME}
+
 $(NAME):${MOBJS}
 	${LIBC} ${NAME} ${MOBJS}
 
@@ -43,12 +57,18 @@ ${BOBJS}: ${SBONUS}
 	${CC} ${CFLAGS} -c ${SBONUS}
 	${LIBC} ${NAME} ${BOBJS}
 
+printf:
+	make -C ${FT_PRINTF}
+	${LIBC} ${NAME} ${OBJS_FT_PRINTF}
+
 clean:
 	${RM} ${MOBJS} ${BOBJS}
+	make clean -C ${FT_PRINTF}
 
 fclean: clean
 	${RM} ${NAME}
+	make fclean -C ${FT_PRINTF}
 
 re: fclean all
 
-.PHONY : all clean fclean re bonus
+.PHONY : all clean fclean re bonus printf
