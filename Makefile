@@ -58,16 +58,16 @@ ${BOBJS}: ${SBONUS}
 	${LIBC} ${NAME} ${BOBJS}
 
 printf:
-	make -C ${FT_PRINTF}
+	make -C ${FT_PRINTF} objs
 	${LIBC} ${NAME} ${OBJS_FT_PRINTF}
 
 clean:
 	${RM} ${MOBJS} ${BOBJS}
-	make clean -C ${FT_PRINTF}
+	make -C ${FT_PRINTF} clean
 
 fclean: clean
 	${RM} ${NAME}
-	make fclean -C ${FT_PRINTF}
+	make -C ${FT_PRINTF} fclean
 
 re: fclean all
 
