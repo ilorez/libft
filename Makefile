@@ -1,6 +1,7 @@
 
 FT_PRINTF = ./ft_printf
 NAME_FT_PRINTF = libftprintf.a
+
 OBJS_FT_PRINTF= ${FT_PRINTF}/ft_printf.o \
 						${FT_PRINTF}/ft_print_char.o \
 						${FT_PRINTF}/ft_print_str.o \
@@ -9,6 +10,11 @@ OBJS_FT_PRINTF= ${FT_PRINTF}/ft_printf.o \
 						${FT_PRINTF}/ft_print_unsigned_nbr.o \
 						${FT_PRINTF}/ft_print_hexa.o
 
+GET_NEXT_LINE = ./get_next_line/
+NAME_GET_NEXT_LINE = get_next_line.a
+
+OBJS_GET_NEXT_LINE = ${GET_NEXT_LINE}/get_next_line.o \
+									${GET_NEXT_LINE}/get_next_line_utils.o
 
 
 SMANDATORY = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
@@ -41,7 +47,7 @@ LIBC = ar rcs
 
 RM = rm -f
 
-all: mandaory bonus printf
+all: mandaory bonus printf get_next_line
 
 mandaory: ${NAME}
 
@@ -61,14 +67,20 @@ printf:
 	make -C ${FT_PRINTF} objs
 	${LIBC} ${NAME} ${OBJS_FT_PRINTF}
 
+get_next_line:
+	make -C ${GET_NEXT_LINE} objs
+	${LIBC} ${NAME} ${OBJS_GET_NEXT_LINE}
+
 clean:
 	${RM} ${MOBJS} ${BOBJS}
 	make -C ${FT_PRINTF} clean
+	make -C ${GET_NEXT_LINE} clean
 
 fclean: clean
 	${RM} ${NAME}
 	make -C ${FT_PRINTF} fclean
+	make -C ${GET_NEXT_LINE} fclean
 
 re: fclean all
 
-.PHONY : all clean fclean re bonus printf
+.PHONY : all clean fclean re bonus printf mandaory get_next_line
