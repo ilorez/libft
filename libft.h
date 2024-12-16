@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:06:37 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 08:28:31 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/16 14:22:33 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <stdint.h>
-# include <stdio.h>
 
 // structure
 typedef struct s_list
