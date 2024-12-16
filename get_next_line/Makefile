@@ -13,7 +13,7 @@ CC = cc
 AR = ar rc
 RM = rm -f
 
-all: $(NAME) $(B_NAME)
+all: mandatory
 
 mandatory: ${NAME}
 
@@ -42,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re objs b_objs
+.PHONY: all clean fclean re objs b_objs mandatory bonus

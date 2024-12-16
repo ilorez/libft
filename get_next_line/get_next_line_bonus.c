@@ -37,14 +37,14 @@ static void	_cut_line(char **c_point, char **line)
 		i++;
 	if (!(*c_point)[i])
 	{
-		*line = ft_strdup(*c_point);
+		*line = ft_gnl_strdup(*c_point);
 		free((*c_point));
 		*c_point = NULL;
 		return ;
 	}
-	*line = (ft_sublen(*c_point, i + 1));
+	*line = (ft_gnl_sublen(*c_point, i + 1));
 	tmp = *c_point;
-	*c_point = ft_strdup(&(*c_point)[i + 1]);
+	*c_point = ft_gnl_strdup(&(*c_point)[i + 1]);
 	free(tmp);
 }
 
@@ -73,9 +73,9 @@ static char	*_search_for_line(int fd, char *c_point, char *buffer)
 		if (readed < 0)
 			return (NULL);
 		buffer[readed] = '\0';
-		found_line = ft_strchr(buffer, '\n');
+		found_line = ft_gnl_strchr(buffer, '\n');
 		tmp = c_point;
-		c_point = ft_strjoin(c_point, buffer);
+		c_point = ft_gnl_strjoin(c_point, buffer);
 		free(tmp);
 	}
 	return (c_point);
@@ -99,7 +99,7 @@ char	*get_next_line(int fd)
 	buffer = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= OPEN_MAX)
 		return (NULL);
-	if (!ft_strchr(c_point[fd], '\n'))
+	if (!ft_gnl_strchr(c_point[fd], '\n'))
 	{
 		buffer = malloc(BUFFER_SIZE + 1);
 		if (!buffer)

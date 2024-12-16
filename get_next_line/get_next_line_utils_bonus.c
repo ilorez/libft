@@ -12,7 +12,7 @@
 
 #include "get_next_line_bonus.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_gnl_strlen(const char *s)
 {
 	size_t	i;
 
@@ -22,18 +22,18 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/* ft_strdup
+/* ft_gnl_strdup
  * this function is used to duplicate a string
  * @param s1: the string that we will duplicate
  * @return: the address of the duplicated string
  * @return: NULL if the string is empty
  **/
-char	*ft_strdup(const char *s1)
+char	*ft_gnl_strdup(const char *s1)
 {
 	char	*dst;
 	size_t	i;
 
-	dst = (char *)malloc(ft_strlen(s1) + 1);
+	dst = (char *)malloc(ft_gnl_strlen(s1) + 1);
 	if (!dst)
 		return (NULL);
 	i = 0;
@@ -46,14 +46,14 @@ char	*ft_strdup(const char *s1)
 	return (dst);
 }
 
-/* ft_sublen
+/* ft_gnl_sublen
  * this function is used to duplicate a substring
  * @param s: the string that we will duplicate
  * @param len: the length of the substring
  * @return: the address of the duplicated substring
  * @return: NULL if the string is empty
  **/
-char	*ft_sublen(char const *s, size_t len)
+char	*ft_gnl_sublen(char const *s, size_t len)
 {
 	char	*ss;
 
@@ -66,7 +66,7 @@ char	*ft_sublen(char const *s, size_t len)
 	return (ss);
 }
 
-/* ft_strchr
+/* ft_gnl_strchr
  * this function is used to search for a character in a string
  * @param s: the string that we will search in
  * @param c: the character that we will search for
@@ -74,7 +74,7 @@ char	*ft_sublen(char const *s, size_t len)
  * @return: NULL if the character is not found
  * #Note: this function is static and can be used only in this file
  **/
-char	*ft_strchr(const char *s, int c)
+char	*ft_gnl_strchr(const char *s, int c)
 {
 	size_t	i;
 
@@ -88,7 +88,7 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)(&(s[i])));
 }
 
-/* ft_strjoin
+/* ft_gnl_strjoin
  * this function is used to concatenate two strings
  * @param s1: the first string
  * @param s2: the second string
@@ -98,7 +98,7 @@ char	*ft_strchr(const char *s, int c)
 	* @note: the funciton always return a new allocated string 
   * or null that can always be freed
  **/
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_gnl_strjoin(char const *s1, char const *s2)
 {
 	char	*dst;
 	size_t	i;
@@ -106,14 +106,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	if (s1 && !s2)
-		return (ft_strdup(s1));
+		return (ft_gnl_strdup(s1));
 	if (!s1 && s2)
 	{
-		return (ft_strdup(s2));
+		return (ft_gnl_strdup(s2));
 	}
 	if (!s1 && !s2)
-		return (ft_strdup(""));
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+		return (ft_gnl_strdup(""));
+	size = ft_gnl_strlen(s1) + ft_gnl_strlen(s2) + 1;
 	dst = malloc(size);
 	if (!dst)
 		return (NULL);
