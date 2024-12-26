@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_is_str_chars_same.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 11:18:46 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/26 10:24:20 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/26 10:37:37 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_is_str_chars_same(char *str, char c)
 {
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	while (*str)
+		if (*str++ != c)
+			return (0);
+	return (1);
 }
-
-/*int main(int ac, char **av)
-{
-	t_list *first;
-	t_list *second;
-
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
-}*/
