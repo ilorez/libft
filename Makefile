@@ -20,16 +20,15 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 			 ft_isspace.c ft_free_str_lst.c ft_atol.c \
 			 ft_is_str_chars_same.c \
 			 ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
-				ft_lstsize_bonus.c ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-				ft_lstclear_bonus.c ft_lstiter_bonus.c \
-				ft_lstmap_bonus.c \
-				ft_printf.c ft_print_char.c ft_print_str.c \
-						ft_print_ptr.c \
-						ft_print_nbr.c \
-						ft_print_unsigned_nbr.c \
-						ft_print_hexa.c get_next_line.c \
-			 		get_next_line_utils.c
+			 ft_lstsize_bonus.c ft_lstlast_bonus.c \
+			 ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
+			 ft_lstclear_bonus.c ft_lstiter_bonus.c \
+			 ft_lstmap_bonus.c \
+			 ft_printf.c ft_print_char.c ft_print_str.c \
+			 ft_print_ptr.c ft_print_nbr.c \
+			 ft_print_unsigned_nbr.c \
+			 ft_print_hexa.c get_next_line.c \
+			 get_next_line_utils.c
 
 OBJS	= $(SRCS:.c=.o)
 
