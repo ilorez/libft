@@ -6,9 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 11:59:56 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 12:00:08 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:15:08 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /* ft_strndup
  * this function is used to duplicate a substring

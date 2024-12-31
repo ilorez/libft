@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 10:02:38 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 11:54:24 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:13:21 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strdup(const char *s1)
 	char	*dst;
 	size_t	i;
 
-	dst = (char *)ft_calloc(ft_strlen(s1) + 1);
+	dst = (char *)ft_calloc(sizeof(char), ft_strlen(s1) + 1);
 	if (!dst)
 		return (NULL);
 	i = 0;
