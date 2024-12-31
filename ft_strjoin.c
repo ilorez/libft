@@ -6,46 +6,47 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:43:27 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/27 18:57:50 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 11:56:29 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
+
+/* ft_strjoin
+ * this function is used to concatenate two strings
+ * @param s1: the first string
+ * @param s2: the second string
+ * @return: the address of the concatenated string
+ * @return: s1 if s2 is NULL and vice versa || if both are NULL return ""
+
+	* @note: the funciton always return a new allocated string 
+  * or null that can always be freed
+ **/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dst;
+	size_t	i;
 	size_t	size;
 
+	i = 0;
 	if (s1 && !s2)
 		return (ft_strdup(s1));
 	if (!s1 && s2)
+	{
 		return (ft_strdup(s2));
+	}
 	if (!s1 && !s2)
 		return (ft_strdup(""));
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	dst = malloc(size);
+	dst = ft_calloc(sizeof(char), size);
 	if (!dst)
 		return (NULL);
-	ft_strlcpy(dst, s1, size);
-	ft_strlcat(dst, s2, size);
+	i = 0;
+	while (*s1)
+		dst[i++] = *s1++;
+	while (*s2)
+		dst[i++] = *s2++;
+	dst[i] = '\0';
 	return (dst);
 }
 
-/*int main(int ac, char **av)
-{
-	if (ac == 3)
-	{
-		printf("%s\n", ft_strjoin(av[1], av[2]));
-		printf("%s\n", ft_strjoin(av[1], NULL));
-		printf("%s\n", ft_strjoin(NULL, av[2]));
-		printf("%s\n", ft_strjoin(NULL, NULL));
-		// strjoin1
-		printf("strjoin1-----\n:%s\n", ft_strjoin1(av[1], av[2]));
-		printf("%s\n", ft_strjoin1(av[1], NULL));
-		printf("%s\n", ft_strjoin1(NULL, av[2]));
-		printf("%s\n", ft_strjoin1(NULL, NULL));
-
-
-	}
-	return (0);
-}*/

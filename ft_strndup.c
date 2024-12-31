@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 10:02:38 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 11:54:24 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/31 11:59:56 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/31 12:00:08 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-
-
-/* ft_strdup
- * this function is used to duplicate a string
- * @param s1: the string that we will duplicate
- * @return: the address of the duplicated string
+/* ft_strndup
+ * this function is used to duplicate a substring
+ * @param s: the string that we will duplicate
+ * @param len: the length of the substring
+ * @return: the address of the duplicated substring
  * @return: NULL if the string is empty
  **/
-
-char	*ft_strdup(const char *s1)
+char	*ft_strndup(char const *s, size_t len)
 {
-	char	*dst;
-	size_t	i;
+	char	*ss;
 
-	dst = (char *)ft_calloc(ft_strlen(s1) + 1);
-	if (!dst)
+	ss = (char *)malloc(len * sizeof(char) + 1);
+	if (!ss)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		dst[i] = s1[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	ss[len] = '\0';
+	while (len--)
+		ss[len] = s[len];
+	return (ss);
 }
 

@@ -28,7 +28,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 			 ft_print_ptr.c ft_print_nbr.c \
 			 ft_print_unsigned_nbr.c \
 			 ft_print_hexa.c get_next_line.c \
-			 get_next_line_utils.c \
+			 ft_strndup.c \
 			 ft_malloc.c
 
 OBJS	= $(SRCS:.c=.o)
