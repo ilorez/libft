@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 10:59:07 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 11:00:29 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 13:20:13 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-// bonus list functions
+// struct list functions
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);

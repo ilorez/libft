@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 11:18:46 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/11/01 10:06:28 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/31 13:19:10 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst && new)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		new->next = *lst;
-		*lst = new;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
 
-/*int main(int ac, char **av)
+/*void print(void *content)
 {
-	t_list *first;
-	t_list *second;
+  printf("%s\n", (char *)content);
+}
 
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
+int	main(void)
+{
+  // test function
+  t_list *list = ft_lstnew(ft_strdup("hello"));
+  ft_lstadd_back(&list, ft_lstnew(ft_strdup("world")));
+  ft_lstadd_back(&list, ft_lstnew("1337"));
+
+  ft_lstiter(list, print);
+  return (0);
 }*/
