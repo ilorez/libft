@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 10:06:28 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/09 16:32:22 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/10/31 11:43:21 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/31 13:19:23 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+int	ft_lstsize(t_list *lst)
 {
-	if (!lst || !f)
-		return ;
-	while (lst)
+	int	count;
+
+	if (!lst)
+		return (0);
+	count = 1;
+	while (lst->next)
 	{
-		f(lst->content);
 		lst = lst->next;
+		count++;
 	}
+	return (count);
 }
 
-/*void print(void *content)
+/*int	main(int ac, char **av)
 {
-  printf("%s\n", (char *)content);
-}
+	t_list	*first;
 
-int	main(void)
-{
-  // test function
-  t_list *list = ft_lstnew(ft_strdup("hello"));
-  ft_lstadd_back(&list, ft_lstnew(ft_strdup("world")));
-  ft_lstadd_back(&list, ft_lstnew("1337"));
-
-  ft_lstiter(list, print);
-  return (0);
+	if (ac >= 4)
+	{
+		first = ft_lstnew(av[1]);
+		first->next = ft_lstnew(av[2]);
+		first->next->next = ft_lstnew(av[3]);
+		first->next->next->next = ft_lstnew(av[3]);
+		printf("size of the list: %d\n", ft_lstsize(first));
+	}
 }*/
