@@ -6,11 +6,27 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 19:24:13 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/06 17:57:34 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 13:06:07 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_print_unsigned_nbr(unsigned int n)
+{
+	int	out_len;
+
+	out_len = 0;
+	if (n >= 10)
+	{
+		out_len += ft_print_unsigned_nbr(n / 10);
+		out_len += ft_print_char(n % 10 + '0');
+	}
+	else
+		out_len += ft_print_char(n + '0');
+	return (out_len);
+}
+
 
 static int	ft_print_type(char type, va_list va)
 {

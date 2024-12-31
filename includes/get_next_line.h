@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:00:55 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 12:06:10 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:54:59 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@
 #  define BUFFER_SIZE 20
 # endif
 
-char	*ft_get_next_line(int fd);
+char	*get_next_line(int fd);
 
 #endif
