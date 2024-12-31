@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:27:50 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/10/30 14:54:17 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 11:37:51 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 		n = -n;
 	}
 	malloc_s += _ft_count_digits(n);
-	result = malloc(sizeof(char) * malloc_s);
+	result = ft_calloc(sizeof(char), malloc_s);
 	if (!result)
 		return (NULL);
 	if (signe == -1)

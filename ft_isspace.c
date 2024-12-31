@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 11:18:46 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/17 18:17:03 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/17 18:17:36 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	ft_isspace(int c)
 {
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	if (c == 32 || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
 }
-
-/*int main(int ac, char **av)
-{
-	t_list *first;
-	t_list *second;
-
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
-}*/

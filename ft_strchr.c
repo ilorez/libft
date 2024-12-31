@@ -6,16 +6,27 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:42:48 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/03 15:04:15 by znajdaou         ###   ########.fr       */
+/*   Updated: 2024/12/31 12:57:51 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
+/* ft_gnl_strchr
+ * this function is used to search for a character in a string
+ * @param s: the string that we will search in
+ * @param c: the character that we will search for
+ * @return: the address of the first occurence of the character in the string
+ * @return: NULL if the character is not found
+ * #Note: this function is static and can be used only in this file
+ **/
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
+  if (!s)
+    return (NULL);
 	i = 0;
 	while (s[i] != (char)c && s[i])
 		i++;
@@ -23,16 +34,3 @@ char	*ft_strchr(const char *s, int c)
 		return (NULL);
 	return ((char *)(&(s[i])));
 }
-
-/*int main(int ac, char **av)
-{
-	char	*res;
-
-	printf("str:%s\nhere is it:%s\n", av[1], ft_strchr(av[1], (int)av[2][0]));
-	printf("str:%s\nhere is it:%s\n", av[1], strchr(av[1], (int)av[2][0]));
-	res = ft_strchr(av[1], (int)av[2][0]);
-	*res = 'W';
-	printf("new str:%s\n", av[1]);
-	return (ac);
-}
-*/

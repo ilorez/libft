@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_malloc.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 11:18:46 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/31 10:34:56 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/31 11:23:12 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_MALLOC_H
+# define FT_MALLOC_H
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+// Struct
+typedef struct s_adr_info
 {
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
-}
+	void	*adr;
+	int		tag;
+	void	(*del)(void *);
+}			t_adr_info;
 
-/*int main(int ac, char **av)
-{
-	t_list *first;
-	t_list *second;
+// this ft_malloc
+void		*ft_malloc(size_t size, t_list **list, int tag,
+				void (*del)(void *));
+// free tag
+t_bool		ft_free_tag(t_list **lst, int tag);
+// Free All Tags
+t_bool	ft_free_all_tags(t_list **lst);
 
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
-}*/
+#endif

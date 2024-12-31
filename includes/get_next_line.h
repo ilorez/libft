@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 11:18:46 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/10 11:00:55 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/31 12:54:59 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
-}
+# include <fcntl.h>
 
-/*int main(int ac, char **av)
-{
-	t_list *first;
-	t_list *second;
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 20
+# endif
 
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
-}*/
+char	*get_next_line(int fd);
+
+#endif

@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 11:18:46 by znajdaou         ###   ########.fr       */
+/*   Created: 2024/12/02 15:44:49 by znajdaou          #+#    #+#             */
+/*   Updated: 2024/12/16 14:21:12 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
-}
+// includes
+# include <stdarg.h>
+# include <stddef.h>
+# include <unistd.h>
 
-/*int main(int ac, char **av)
-{
-	t_list *first;
-	t_list *second;
+// used functions
+int	ft_printf(const char *format, ...);
+int	ft_print_char(int c);
+int	ft_print_nbr(int nbr);
+int	ft_print_str(char *str);
+int	ft_print_ptr(void *n);
+int	ft_print_unsigned_nbr(unsigned int n);
+int	ft_print_hexa(unsigned long nbr, char *base);
 
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
-}*/
+#endif
