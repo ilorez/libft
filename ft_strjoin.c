@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-
 /* ft_strjoin
  * this function is used to concatenate two strings
  * @param s1: the first string
@@ -19,7 +18,7 @@
  * @return: the address of the concatenated string
  * @return: s1 if s2 is NULL and vice versa || if both are NULL return ""
 
-	* @note: the funciton always return a new allocated string 
+	* @note: the funciton always return a new allocated string
   * or null that can always be freed
  **/
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -49,4 +48,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dst[i] = '\0';
 	return (dst);
 }
-

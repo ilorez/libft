@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 /* ft_gnl_strchr
  * this function is used to search for a character in a string
  * @param s: the string that we will search in
@@ -25,8 +24,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
-  if (!s)
-    return (NULL);
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (s[i] != (char)c && s[i])
 		i++;

@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:43:21 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 13:19:23 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:10:49 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-
-/*int	main(int ac, char **av)
-{
-	t_list	*first;
-
-	if (ac >= 4)
-	{
-		first = ft_lstnew(av[1]);
-		first->next = ft_lstnew(av[2]);
-		first->next->next = ft_lstnew(av[3]);
-		first->next->next->next = ft_lstnew(av[3]);
-		printf("size of the list: %d\n", ft_lstsize(first));
-	}
-}*/

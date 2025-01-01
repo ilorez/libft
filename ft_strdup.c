@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-
-
 /* ft_strdup
  * this function is used to duplicate a string
  * @param s1: the string that we will duplicate
@@ -38,4 +36,3 @@ char	*ft_strdup(const char *s1)
 	dst[i] = '\0';
 	return (dst);
 }
-

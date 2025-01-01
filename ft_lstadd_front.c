@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:06:20 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 13:18:57 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:08:56 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
-
-/*int main(int ac, char **av)
-{
-	t_list *first;
-	t_list *second;
-
-	if ( ac >= 3)
-	{
-		first = ft_lstnew(av[1]);
-		second = ft_lstnew(av[2]);
-		ft_lstadd_front(&second, first);
-		printf("first item:[%s]\nsecond item:[%s]\n", second->content,
-			second->next->content);
-	}
-}*/
