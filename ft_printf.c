@@ -27,7 +27,6 @@ int	ft_print_unsigned_nbr(unsigned int n)
 	return (out_len);
 }
 
-
 static int	ft_print_type(char type, va_list va)
 {
 	if (type == 'c')

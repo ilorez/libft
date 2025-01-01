@@ -31,4 +31,3 @@ char	*ft_strndup(char const *s, size_t len)
 		ss[len] = s[len];
 	return (ss);
 }
-

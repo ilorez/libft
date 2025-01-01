@@ -50,8 +50,8 @@ int	ft_print_ptr(void *ptr)
 {
 	if (ptr == NULL)
 		return (write(1, "(nil)", 5));
-	return (write(1, "0x", 2)
-		+ ft_print_hexa((unsigned long)ptr, "0123456789abcdef"));
+	return (write(1, "0x", 2) + ft_print_hexa((unsigned long)ptr,
+			"0123456789abcdef"));
 }
 
 int	ft_print_str(char *str)
