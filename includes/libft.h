@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:06:37 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/31 12:14:32 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/01/01 17:23:52 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 // the difference between strlcat and strlcpy is that strlcat
 // append the src to dst and strlcpy copy the src to dst
 char		*ft_strdup(const char *s1);
-char	*ft_strndup(char const *s, size_t len);
+char		*ft_strndup(char const *s, size_t len);
 // this function is for duplicating a string
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 // this function is for extracting a substring from a string
