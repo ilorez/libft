@@ -15,6 +15,7 @@
  * this function is used to concatenate two strings
  * @param s1: the first string
  * @param s2: the second string
+* @param c: the characters to be added between the two strings
  * @return: the address of the concatenated string
  * @return: s1 if s2 is NULL and vice versa || if both are NULL return ""
 
