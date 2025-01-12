@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:43:27 by znajdaou          #+#    #+#             */
-/*   Updated: 2025/01/09 12:11:26 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/01/11 17:40:12 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -44,7 +44,7 @@ char	*ft_strjoin(char const *s1, char const *s2, char const *c)
 	i = 0;
 	while (*s1)
 		dst[i++] = *s1++;
-	while (*c)
+  while (c && *c)
 		dst[i++] = *c++;
 	while (*s2)
 		dst[i++] = *s2++;
