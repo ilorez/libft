@@ -6,7 +6,7 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:43:27 by znajdaou          #+#    #+#             */
-/*   Updated: 2025/01/11 17:40:12 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/01/12 11:31:13 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,13 +22,13 @@
 	* @note: the funciton always return a new allocated string
   * or null that can always be freed
  **/
+
 char	*ft_strjoin(char const *s1, char const *s2, char const *c)
 {
 	char	*dst;
 	size_t	i;
 	size_t	size;
 
-	i = 0;
 	if (s1 && !s2)
 		return (ft_strdup(s1));
 	if (!s1 && s2)
@@ -44,7 +44,7 @@ char	*ft_strjoin(char const *s1, char const *s2, char const *c)
 	i = 0;
 	while (*s1)
 		dst[i++] = *s1++;
-  while (c && *c)
+	while (c && *c)
 		dst[i++] = *c++;
 	while (*s2)
 		dst[i++] = *s2++;
