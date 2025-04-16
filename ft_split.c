@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/31 16:37:58 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "./includes/libft.h"
 
 static size_t	_ft_c_ws(char const *str, char c)
 {

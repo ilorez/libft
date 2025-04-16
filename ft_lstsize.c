@@ -6,11 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 11:43:21 by znajdaou          #+#    #+#             */
-/*   Updated: 2025/01/01 15:10:49 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:14:01 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./includes/ft_linked_lst.h"
 
 int	ft_lstsize(t_list *lst)
 {

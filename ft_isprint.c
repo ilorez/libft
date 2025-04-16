@@ -9,7 +9,7 @@
 /*   Updated: 2024/10/23 08:33:04 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "./includes/libft.h"
 
 int	ft_isprint(int c)
 {

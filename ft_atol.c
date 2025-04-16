@@ -6,11 +6,11 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 18:15:44 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/12/19 09:19:10 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:10:08 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./includes/libft.h"
 
 long long	_ft_max_as_signe(int signe)
 {

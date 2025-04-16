@@ -6,10 +6,10 @@
 /*   By: znajdaou <znajdaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:27:57 by znajdaou          #+#    #+#             */
-/*   Updated: 2024/11/07 09:50:07 by znajdaou         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:08:19 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "./includes/libft.h"
 
 static int	_d_signe(int signe)
 {

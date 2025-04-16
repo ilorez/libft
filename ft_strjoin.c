@@ -9,7 +9,7 @@
 /*   Updated: 2025/01/12 11:31:13 by znajdaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "./includes/libft.h"
 
 /* ft_strjoin
  * this function is used to concatenate two strings
